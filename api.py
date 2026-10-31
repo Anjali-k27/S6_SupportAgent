@@ -3,9 +3,14 @@ Enterprise AI Support Platform — FastAPI Backend
 Session 6 of 12 — Guardrails & Execution Bounding
 """
 
+import sys
 import json
 import uuid
 import asyncio
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 from typing import Optional
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
